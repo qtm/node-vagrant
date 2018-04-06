@@ -293,16 +293,16 @@ Machine.prototype.snapshots = function () {
             self._generic('snapshot', 'pop', cb);
         },
         save: function (args, cb) {
-            self._generic('snapshot save', args, cb);
+            self._generic(['snapshot', 'save'], args, cb);
         },
         restore: function (args, cb) {
-            self._generic('snapshot restore', args, cb);
+            self._generic(['snapshot', 'restore'], args, cb);
         },
         list: function (cb) {
             self._generic('snapshot', 'list', cb);
         },
         delete: function (args, cb) {
-            self._generic('snapshot delete', args, cb);
+            self._generic(['snapshot', 'delete'], args, cb);
         }
     };
 };
